@@ -1,0 +1,16 @@
+{
+  "name": "image-system-js",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel src/index.html"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "parcel": "^2.8.0"
+  },
+  "dependencies": {
+    "sass": "^1.56.1"
+  }
+}

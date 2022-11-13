@@ -1,0 +1,140 @@
+.img__file-custom {
+    display: inline-flex;
+    align-items: center;
+    background: orange;
+    padding: 7px 8px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 7px;
+    color: white;
+    margin-bottom: 15px;
+
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+.img__file-custom:hover {
+    background-color: rgb(204, 143, 29);
+}
+
+.img__icon {
+    color: white;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+
+
+.img__block {
+    display: flex;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.img__container {
+    overflow: hidden;
+    width: 30%;
+    min-height: 100px;
+    transition: all .3s linear;
+    border-radius: 5px;
+    transition: transform .3s linear;
+    animation: image;
+    animation-duration: .5s;
+}
+
+.img__container:hover {
+    transform: scale(1.1);
+}
+
+.img__container.draggable img {
+    opacity: .6;
+}
+
+.img__wrapper {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.img__container img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.img__info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 100%;
+    bottom: -100%;
+    background-color: rgba(128, 128, 128, 0);
+    
+    transition: .3s linear;
+    padding: 5px;
+}
+
+.img__size, .img__name {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.img__container:hover .img__info {
+    background-color: rgba(128, 128, 128, 0.6);
+    bottom: 0;
+}
+
+.img__delete {
+    position: absolute;
+    z-index: 6;
+    top: -100%;
+    right: 0;
+    padding: 3px 7px;
+    font: 17px;
+    background-color: rgba(128, 128, 128, 0);
+    color: white;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.img__container:hover .img__delete {
+    background-color: rgba(128, 128, 128, 0.6);
+    top: 0;
+}
+
+.img__alert {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: red;
+    color: white;
+    margin-bottom: 10px;
+    animation: error;
+    animation-duration: .3s;
+}
+
+
+@keyframes error {
+    from {
+        transform: scale(0.5);
+        opacity: .3;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes image {
+    from {
+        transform: scale(0.5);
+        opacity: .3;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
